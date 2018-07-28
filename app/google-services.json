@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "484839458839",
+    "firebase_url": "https://wallpaper-15539.firebaseio.com",
+    "project_id": "wallpaper-15539",
+    "storage_bucket": "wallpaper-15539.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484839458839:android:66e5b662c8aa333b",
+        "android_client_info": {
+          "package_name": "com.company.bestever.wallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484839458839-tnfvukooo1p7gf1tl8klr40d946fdsa7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.company.bestever.wallpaper",
+            "certificate_hash": "797acee55d0107a79ed5a1149c6ab4e74e0a2adc"
+          }
+        },
+        {
+          "client_id": "484839458839-9p8c8q1i43a35qifm95np0rja6g6obvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPsVNogERDVZaJXkX7amRYfpV0VUjRcNA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484839458839-9p8c8q1i43a35qifm95np0rja6g6obvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
