@@ -1,13 +1,20 @@
 package com.company.bestever.wallpaper.screen.main;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
+
 import com.company.bestever.wallpaper.R;
 import com.company.bestever.wallpaper.screen.folders_fragment.FoldersFragment;
 import com.company.bestever.wallpaper.tools.ChangeFragment;
 
+import java.io.File;
+
 import me.yokeyword.fragmentation_swipeback.SwipeBackActivity;
 
 public class MainActivity extends SwipeBackActivity {
+
+    private static final String TAG = "adfasd";
 
     private ChangeFragment changeFragment;
     private FoldersFragment mainFragment;
@@ -20,7 +27,7 @@ public class MainActivity extends SwipeBackActivity {
         setClasses();
 
         changeFragment.attachActivity(this);
-        changeFragment.replaceFragment(mainFragment, "MAIN_FRAGMENT");
+        changeFragment.replaceFragment(mainFragment, "main");
 
         setSwipeBackEnable(false);
 
