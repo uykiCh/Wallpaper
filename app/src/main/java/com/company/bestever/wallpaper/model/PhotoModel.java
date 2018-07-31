@@ -19,6 +19,14 @@ public class PhotoModel implements ListItem {
     public PhotoModel() {
     }
 
+    public String getFolderPath() {
+        return folderPath;
+    }
+
+    public void setFolderPath(String folderPath) {
+        this.folderPath = folderPath;
+    }
+
     public PhotoModel(String imageURL) {
         this.imageURL = imageURL;
     }

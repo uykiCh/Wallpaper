@@ -58,13 +58,13 @@ public class FoldersFragment extends SwipeBackFragment implements FromAdapterInt
 
             setRV();
 
-            setDemo();
+            //add folders and photos
+            addAll();
 
-            Log.i(TAG, String.valueOf(foldersFragmentPresenter.getAllFoldersByPath(getTag()).size()));
-            Log.i(TAG, "TAG is: " + getTag());
+            //debug
+            printLogs();
 
-            list.addAll(foldersFragmentPresenter.getAllFoldersByPath(getTag()));
-            multiAdapter.notifyDataSetChanged();
+            displayEmptyIfListIsEmpty();
 
         }
 
@@ -76,23 +76,33 @@ public class FoldersFragment extends SwipeBackFragment implements FromAdapterInt
         }
         //if getTag().equals("FOLDER_FRAGMENT")
         else {
+
             return attachToSwipeBack(view);
+
         }
     }
 
-    private void setDemo() {
-        foldersFragmentPresenter.insertFolder("animals", getTag(), "https://picsum.photos/720/1280/?image=" + (new Random()).nextInt(1000), null);
-        foldersFragmentPresenter.insertFolder("humans", getTag(), "https://picsum.photos/720/1280/?image=" + (new Random()).nextInt(1000), null);
-        foldersFragmentPresenter.insertFolder("zimmer", getTag(), "https://picsum.photos/720/1280/?image=" + (new Random()).nextInt(1000), null);
-        foldersFragmentPresenter.insertFolder("room", getTag(), "https://picsum.photos/720/1280/?image=" + (new Random()).nextInt(1000), null);
-        foldersFragmentPresenter.insertFolder("animals", getTag(), "https://picsum.photos/720/1280/?image=" + (new Random()).nextInt(1000), null);
+    private void displayEmptyIfListIsEmpty() {
+        if (list.isEmpty()){
+            view.findViewById(R.id.fragment_main_empty).setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void printLogs() {
+        Log.i(TAG, "Path is: " + getTag());
+        Log.i(TAG, "Folders: " + foldersFragmentPresenter.getAllFoldersByPath(getTag()).size());
+        Log.i(TAG, "Photos: " + foldersFragmentPresenter.getAllPhotosByPath(getTag()).size() + "\n");
+    }
+
+    private void addAll() {
+        list.addAll(foldersFragmentPresenter.getAllFoldersByPath(getTag()));
+        list.addAll(foldersFragmentPresenter.getAllPhotosByPath(getTag()));
+        multiAdapter.notifyDataSetChanged();
     }
 
     private void setRV() {
 
         list = new ArrayList<>();
-
-        list.addAll(foldersFragmentPresenter.getAllFoldersByPath(getTag()));
 
         recyclerView = view.findViewById(R.id.fragment_main_recycler_view);
 
