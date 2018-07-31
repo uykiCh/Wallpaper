@@ -4,6 +4,8 @@ Local database: Room
 Additionally: MVP, ButterKnife, Glide
 
 Path system: main + fragmentTag
+
+
 Example:  
           
           {animals->dogs->Boerboel} is {main_1_2_3}
