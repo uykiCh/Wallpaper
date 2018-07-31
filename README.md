@@ -1,6 +1,9 @@
 # Wallpaper
 
+Demo app
+
 Local database: Room
+
 Additionally: MVP, ButterKnife, Glide
 
 Path system: main + fragmentTag
