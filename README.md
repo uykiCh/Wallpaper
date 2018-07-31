@@ -17,7 +17,7 @@ Example:
           
           {animals} is {main_1}
           
-          1,2,3 - autoincrement
+          1, 2, 3, 4... - auto increment
           
 
 In future:
